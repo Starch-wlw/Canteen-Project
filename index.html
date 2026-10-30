@@ -9,62 +9,120 @@
 </head>
 
 <body class="bg-[#c99da8] overflow-x-hidden">
-    <header class="px-5 py-5">
-        <nav class="flex gap-x-8 text-1xl align-middle justify-center">
+    <header class="fixed top-0 left-0 w-full z-50 px-5 py-5">
+        <nav class="flex gap-x-8 text-xl justify-center">
             <a href="">Home</a>
             <a href="">Snack</a>
             <a href="">About</a>
         </nav>
     </header>
-    <section>
 
-        <div class="flex justify-center text-4x2"> SPECIAL OFFER SCROLL DOWN </div>
 
-        <div class="flex justify-start pl-[74%] mt-= mb-8">
+    <section id="hscroll" class="relative">
+        <div class="sticky top-0 h-screen overflow-hidden">
 
-            <div class="bg-[#D32567] text-2xl md:text-5xl px-6 md:px-20 py-4 font-mono font-bold text-white">
-                BEST SELLER  :
-            </div>
-        </div>
+            <div id="track" class="flex h-full w-max will-change-transform">
 
-        <div class="flex justify-end px-5 md:pr-[5%] mt-8 mb-8">
+                <div class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-10 px-6 md:px-12 pt-20 pb-6">
 
-            <div class="grid grid-cols-2 gap-x-6 md:gap-x-16 lg:gap-x-32 gap-y-10 w-full max-w-[700px]">
-
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        CAPPUCCINO 20K
+                    <!-- LEFT: text -->
+                    <div>
+                        <h1 class="font-mono font-bold text-white text-4xl text-center md:text-6xl lg:text-8xl">
+                            SPECIAL OFFER
+                        </h1>
+                        <p class="font-mono font-bold text-white text-lg text-center md:text-3xl lg:text-4xl mt-3 md:mt-6">
+                            SCROLL DOWN
+                        </p>
                     </div>
-                </div>
 
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
-                    </div>
-                </div>
 
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
+                    <div class="flex flex-col items-center md:items-end gap-4 md:gap-6">
+                        <div class="bg-[#D32567] text-xl md:text-4xl px-6 md:px-12 py-2 md:py-4 font-mono font-bold text-white">
+                            BEST SELLER:
+                        </div>
+                        <div id="best" class="grid grid-cols-2 gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-8 w-full max-w-[280px] md:max-w-[420px] lg:max-w-[480px]"></div>
                     </div>
-                </div>
 
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
-                    </div>
                 </div>
 
 
 
             </div>
-        </div>
 
+
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-white/30">
+                <div id="bar" class="h-full w-0 bg-[#D32567]"></div>
+            </div>
+        </div>
     </section>
+
+    <script>
+
+
+        const bestSellers = [
+            { name: "CAPPUCCINO", price: "20K", image: "test.png" },
+            { name: "CAPPUCCINO", price: "20K", image: "test.png" },
+            { name: "CAPPUCCINO", price: "20K", image: "test.png" },
+            { name: "CAPPUCCINO", price: "20K", image: "test.png" }
+        ];
+
+
+        const details = [
+            { name: "CAPPUCCINO", price: "20K", image: "test.png", desc: "Espresso with steamed milk and a thick layer of foam." },
+            { name: "LATTE",      price: "22K", image: "test.png", desc: "Smooth and milky, with a light espresso taste." },
+            { name: "ESPRESSO",   price: "15K", image: "test.png", desc: "Strong, short and bold. Pure coffee." },
+            { name: "MOCHA",      price: "25K", image: "test.png", desc: "Coffee meets chocolate, topped with cream." }
+        ];
+
+        const wrapper = document.getElementById("hscroll");
+        const track = document.getElementById("track");
+        const bar = document.getElementById("bar");
+        const best = document.getElementById("best");
+
+
+        best.innerHTML = bestSellers.map(function (p) {
+            return `
+                <div class="group">
+                    <div class="overflow-hidden">
+                        <img src="${p.image}" alt="${p.name}" class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                    </div>
+                    <div class="hover:scale-110 bg-[#D32567] text-xs md:text-lg px-2 md:px-3 py-2 shadow-2xl text-white font-mono font-bold transition text-center">
+                        ${p.name} ${p.price}
+                    </div>
+                </div>`;
+        }).join("");
+
+
+        track.insertAdjacentHTML("beforeend", details.map(function (d) {
+            return `
+                <div class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6">
+                    <img src="${d.image}" alt="${d.name}" class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">${d.name}</h2>
+                        <p class="font-mono text-white text-lg md:text-2xl mt-4">${d.desc}</p>
+                        <div class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">${d.price}</div>
+                    </div>
+                </div>`;
+        }).join(""));
+
+
+        const totalPanels = details.length + 1;
+        wrapper.style.height = (totalPanels * 100) + "vh";
+
+        function update() {
+            const maxScroll = wrapper.offsetHeight - window.innerHeight;
+            const scrolled = -wrapper.getBoundingClientRect().top;
+            const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+
+            const maxX = track.scrollWidth - window.innerWidth;
+            track.style.transform = "translateX(" + (-progress * maxX) + "px)";
+            bar.style.width = (progress * 100) + "%";
+        }
+
+        window.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+        update();
+    </script>
 </body>
 
 </html>
