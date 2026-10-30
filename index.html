@@ -9,7 +9,7 @@
 </head>
 
 <body class=" bg-[#c99da8] overflow-x-hidden">
-    <header class="flex fixed w-full justify-between px-5 py-5 backdrop-blur-sm bg-[#D32567]/50">
+    <header class="z-50 flex fixed w-full justify-between px-5 py-5 backdrop-blur-sm bg-[#D32567]/50">
         <img class="h-5 w-auto object-contain" src="https://azysgithub.github.io/images/projects/dexplusplus.png"><img>
         <nav class="flex gap-x-8 text-1xl justify-center items-center text-white">
             <a href="">Home</a>
@@ -17,59 +17,176 @@
             <a href="">About</a>
         </nav>
     </header>
-    <section>
 
-        <div class="flex justify-center text-4xl"> SPECIAL OFFER SCROLL DOWN </div>
 
-        <div class="flex justify-start pl-[74%] mt-= mb-8">
+    <section id="tall" class="relative">
+        <div class="sticky top-0 h-screen overflow-hidden">
 
-            <div class="bg-[#D32567] text-2xl md:text-5xl px-6 md:px-20 py-4 font-mono font-bold text-white">
-                BEST SELLER :
+            <div id="row" class="flex h-full w-max">
+
+                <!-- Main Content also the text for the best selling -->
+                <div
+                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-10 px-6 md:px-12 pt-20 pb-6 bg-[#c99da8]">
+
+                    <div class="md:ms-16 lg:ms-32">
+                        <h1
+                            class="font-mono font-bold text-white text-4xl text-center md:text-left md:text-8xl lg:text-9xl">
+                            SPECIAL OFFER</h1>
+                        <p
+                            class="font-mono font-bold text-white text-lg  text-center md:text-left md:text-3xl lg:text-4xl mt-3 md:mt-6">
+                            SCROLL DOWN</p>
+                    </div>
+
+                    <div class="flex flex-col items-center md:items-end gap-4 md:gap-6">
+                        <div
+                            class="bg-[#D32567] text-xl md:text-4xl px-6 md:px-12 py-2 md:py-4 font-mono font-bold text-white">
+                            BEST SELLER:</div>
+
+                        <div
+                            class="grid grid-cols-2 gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-8 w-full max-w-[280px] md:max-w-[420px] lg:max-w-[480px]">
+
+                            <div class="group">
+                                <div class="overflow-hidden"><img src="test.png"
+                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                </div>
+                                <div href="cappucino"
+                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                    CAPPUCCINO 20K</div>
+                            </div>
+
+                            <div class="group">
+                                <div class="overflow-hidden"><img src="test.png"
+                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                </div>
+                                <div
+                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                    CAPPUCCINO 20K</div>
+                            </div>
+
+                            <div class="group">
+                                <div class="overflow-hidden"><img src="test.png"
+                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                </div>
+                                <div
+                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                    CAPPUCCINO 20K</div>
+                            </div>
+
+                            <div class="group">
+                                <div class="overflow-hidden"><img src="test.png"
+                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                </div>
+                                <div
+                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                    CAPPUCCINO 20K</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cappucino-->
+                <div id="cappucino"
+                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#7a4038]">
+                    <img src="test.png"
+                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">CAPPUCCINO</h2>
+                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Espresso with steamed milk and a thick
+                            layer of foam.</p>
+                        <div
+                            class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
+                            20K</div>
+                    </div>
+                </div>
+
+                <!--  latte -->
+                <div id="latte"
+                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#a06b5b]">
+                    <img src="Latte.png"
+                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">LATTE</h2>
+                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Smooth and milky, with a light espresso
+                            taste.</p>
+                        <div
+                            class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
+                            22K</div>
+                    </div>
+                </div>
+
+                <!-- espresso -->
+                <div id="expresso"
+                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#2e0e0a]">
+                    <img src="Espresso.png"
+                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">ESPRESSO</h2>
+                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Strong, short and bold. Pure coffee.
+                        </p>
+                        <div
+                            class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
+                            15K</div>
+                    </div>
+                </div>
+
+                <!-- Mocha -->
+                <div id="mocha"
+                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#6b4a3a]">
+                    <img src="Mocha.png"
+                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">Mocha</h2>
+                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Chocolate + Coffe.</p>
+                        <div
+                            class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
+                            15K</div>
+                    </div>
+                </div>
+
+                <!-- view all -->
+                <div
+                    class="w-screen h-full shrink-0 flex flex-col items-center justify-center gap-6 px-6 pt-20 pb-6 bg-[#c99da8]">
+                    <h2 class="font-mono font-bold text-white text-4xl md:text-7xl text-center">WANT MORE?</h2>
+                    <p class="font-mono text-white text-lg md:text-2xl text-center">See everything we serve.</p>
+                    <a href="menu.html"
+                        class="bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-8 py-4 hover:scale-105 transition">VIEW
+                        ALL</a>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full h-2 bg-white/30">
+                <div id="bar" class="h-full w-0 bg-[#D32567]"></div>
             </div>
         </div>
-
-        <div class="flex justify-end px-5 md:pr-[5%] mt-8 mb-8">
-
-            <div class="grid grid-cols-2 gap-x-6 md:gap-x-16 lg:gap-x-32 gap-y-10 w-full max-w-[700px]">
-
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div
-                        class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        CAPPUCCINO 20K
-                    </div>
-                </div>
-
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div
-                        class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
-                    </div>
-                </div>
-
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div
-                        class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
-                    </div>
-                </div>
-
-                <div>
-                    <img src="test.png" class="w-full aspect-square object-cover">
-                    <div
-                        class="hover:bg-[#9F1B4C] bg-[#D32567] text-base md:text-2xl px-3 md:px-6 py-3 shadow-2xl text-[#ffffff] font-mono font-bold transition text-center">
-                        NAME OF SNACK 15K
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
-
     </section>
+
+
+    <script>
+        const tall = document.getElementById("tall");
+        const row = document.getElementById("row");
+        const bar = document.getElementById("bar");
+
+
+        tall.style.height = (row.children.length * 100) + "vh";
+
+
+        function update() {
+            const maxScroll = tall.offsetHeight - window.innerHeight;
+            const scrolled = -tall.getBoundingClientRect().top;
+            const progress = Math.min(Math.max(scrolled / maxScroll, 0), 1);
+
+            const maxX = row.scrollWidth - window.innerWidth;
+            row.style.transform = "translateX(" + (-progress * maxX) + "px)";
+            bar.style.width = (progress * 100) + "%";
+        }
+
+
+        window.addEventListener("scroll", update);
+        window.addEventListener("resize", update);
+        update();
+    </script>
 </body>
 
 </html>
