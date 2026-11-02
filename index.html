@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,8 +12,11 @@
     <div class="fixed inset-0 -z-10 bg-[#c99da8] bg-cover bg-center bg-no-repeat"
          style="background-image: url('main.png');"></div>
 
-    <header class="z-50 flex fixed w-full justify-between px-5 py-5 backdrop-blur-sm bg-[#D32567]/50">
-        <img class="h-5 w-auto object-contain" src="https://azysgithub.github.io/images/projects/dexplusplus.png"><img>
+    <header class="z-50 flex fixed w-full items-center justify-center px-5 py-5 backdrop-blur-sm bg-[#D32567]/50">
+         <a href="#" class="absolute left-5 top-1/2 -translate-y-1/2 flex items-center">
+            <img class="h-5 w-auto object-contain"
+                 src="https://azysgithub.github.io/images/projects/dexplusplus.png" alt="Canteen logo">
+        </a>
         <nav class="flex gap-x-8 text-1xl justify-center items-center text-white">
             <a href="">Home</a>
             <a href="">Snack</a>
@@ -24,6 +27,15 @@
 
 
     <section id="tall" class="relative">
+
+
+        <span id="to-cappucino" class="absolute left-0 top-[100vh]"></span>
+        <span id="to-latte"     class="absolute left-0 top-[200vh]"></span>
+        <span id="to-espresso"  class="absolute left-0 top-[300vh]"></span>
+        <span id="to-mocha"     class="absolute left-0 top-[400vh]"></span>
+        <span id="to-more"     class="absolute left-0 top-[1000vh]"></span>
+
+        <div class="sticky top-0 h-screen overflow-hidden">
         <div class="sticky top-0 h-screen overflow-hidden">
 
             <div id="row" class="flex h-full w-max">
@@ -34,17 +46,18 @@
 
                     <div class="md:ms-16 lg:ms-32">
 
-                        <h1 class="[font-family:Impact,_sans-serif]  text-[#D32567] [text-shadow:_2px_0_white,_-2px_0_white,_0_2px_white,_0_-2px_white,_2px_2px_white,_-2px_-2px_white,_2px_-2px_white,_-2px_2px_white] text-4xl text-center md:text-left md:text-8xl lg:text-9xl drop-shadow-lg">
+                        <h1 class="[font-family:Impact,_sans-serif]  text-[#D32567] [text-shadow:_2px_0_white,_-2px_0_white,_0_2px_white,_0_-2px_white,_2px_2px_white,_-2px_-2px_white,_2px_-2px_white,_-2px_2px_white] text-4xl text-center md:text-left md:text-8xl lg:text-9xl drop-shadow-lg transition duration-300 hover:scale-110">
                           SPECIAL OFFER
                         </h1>
                         <p
-                            class="font-sans font-bold text-white text-lg  text-center md:text-left md:text-3xl lg:text-4xl mt-3 md:mt-6 drop-shadow-lg">
+                            class="font-sans font-bold text-white text-lg text-center md:text-left md:text-3xl lg:text-4xl mt-3 md:mt-6 drop-shadow-lg">
                                 Coffe, Non-Coffe and Snack.</p>
 
                             <div class="flex items-center justify-center md:justify-start gap-4 font-sans font-bold text-white text-lg md:text-3xl lg:text-4xl mt-3 md:mt-6 bg-[#D32567] py-6 px-6 md:py-4 md:px-18 drop-shadow-lg">
 
 
                               <div class="font-sans text-center">
+
                                 <span class="block">STARTS</span>
                                 <span class="block">FROM</span>
                               </div>
@@ -66,39 +79,47 @@
                             class="grid grid-cols-2 gap-x-4 md:gap-x-10 gap-y-4 md:gap-y-8 w-full max-w-[280px] md:max-w-[420px] lg:max-w-[480px]">
 
                             <div class="group">
-                                <div class="overflow-hidden"><img src="test.png"
-                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
-                                </div>
-                                <div href="cappucino"
-                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
-                                    CAPPUCCINO 20K</div>
+                                <a href="#to-cappucino" class="group block">
+                                    <div class="overflow-hidden"><img src="test.png"
+                                            class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                        CAPPUCCINO 20K</div>
+                                </a>
                             </div>
 
                             <div class="group">
-                                <div class="overflow-hidden"><img src="test.png"
-                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
-                                </div>
-                                <div
-                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
-                                    CAPPUCCINO 20K</div>
+                                <a href="#to-latte" class="group block">
+                                    <div class="overflow-hidden"><img src="test.png"
+                                            class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                        LATTE 20K</div>
+                                </a>
                             </div>
 
                             <div class="group">
-                                <div class="overflow-hidden"><img src="test.png"
-                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
-                                </div>
-                                <div
-                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
-                                    CAPPUCCINO 20K</div>
+                                <a href="#to-espresso" class="group block">
+                                    <div class="overflow-hidden"><img src="test.png"
+                                            class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                        espresso 20K</div>
+                                </a>
                             </div>
 
                             <div class="group">
-                                <div class="overflow-hidden"><img src="test.png"
-                                        class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
-                                </div>
-                                <div
-                                    class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
-                                    CAPPUCCINO 20K</div>
+                                <a href="#to-mocha" class="group block">
+                                    <div class="overflow-hidden"><img src="test.png"
+                                            class="w-full aspect-square object-cover transition duration-300 group-hover:scale-110">
+                                    </div>
+                                    <div
+                                        class="bg-[#D32567] text-xs md:text-lg px-2 py-2 text-white font-mono font-bold text-center">
+                                        MOCHA 20K</div>
+                                </a>
                             </div>
 
                         </div>
@@ -116,13 +137,13 @@
 
                         <!-- Button -->
                         <label for="desc-cappucino"
-                            class="peer-checked:[&>span]:rotate-180 absolute inset-0 z-10 flex items-center justify-center cursor-pointer select-none bg-[#7a4038] shadow-[8px_0_20px_rgba(0,0,0,0.2)] font-sans text-white text-2xl font-bold">
+                            class="peer-checked:[&>span]:rotate-180 absolute inset-0 md:-translate-x-5 w-full h-full z-10 flex items-center justify-center cursor-pointer select-none bg-[#7a4038] shadow-[8px_0_20px_rgba(0,0,0,0.2)] font-sans text-white text-2xl font-bold">
                             <span class="transition-transform duration-500">&gt;</span>
                         </label>
 
                         <!-- panel description -->
                         <div
-                            class="absolute top-0 left-10 z-0 h-full w-[28rem] p-6 flex items-center bg-[#7a4038]
+                            class="absolute top-0 left-5 md:left-1 z-0 h-full w-[28rem] p-6 flex items-center bg-[#7a4038]
                                    -translate-x-6 opacity-0 duration-500 ease-out [clip-path:inset(0_100%_0_0)]
                                    peer-checked:pointer-events-auto peer-checked:translate-x-0 peer-checked:opacity-100 peer-checked:[clip-path:inset(0_0_0_0)]">
                             <p class="font-mono text-white text-xl md:text-2xl">
@@ -133,7 +154,7 @@
 
 
                     <div class="text-center md:text-left md:max-w-[560px] transition-opacity duration-300 peer-has-[:checked]:opacity-0">
-                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">CAPPUCCINO</h2>
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-6xl ">CAPPUCCINO</h2>
 
                         <!-- Deskripsi buat di hp -->
                         <p class="md:hidden font-mono text-white text-lg mt-4">Espresso with steamed milk and a thick
@@ -147,13 +168,37 @@
 
                 <!--  latte -->
                 <div id="latte"
-                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#a06b5b]">
+                    class="w-screen h-full shrink-0 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-6 md:px-20 pt-20 pb-6 bg-[#a06b5b]">
                     <img src="Latte.png"
-                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
-                    <div class="text-center md:text-left">
-                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">LATTE</h2>
-                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Smooth and milky, with a light espresso
+                        class="w-[260px] md:w-[420px] shrink-0 aspect-square object-cover shadow-2xl">
+
+                    <div class="peer hidden md:block relative shrink-0 w-10 h-96">
+                        <input type="checkbox" id="desc-latte" class="peer sr-only">
+
+                        <!-- Button -->
+                        <label for="desc-latte"
+                            class="peer-checked:[&>span]:rotate-180 absolute inset-0 md:-translate-x-5 w-full h-full z-10 flex items-center justify-center cursor-pointer select-none bg-[#a06b5b] shadow-[8px_0_20px_rgba(0,0,0,0.2)] font-sans text-white text-2xl font-bold">
+                            <span class="transition-transform duration-500">&gt;</span>
+                        </label>
+
+                        <!-- panel description -->
+                        <div
+                            class="absolute top-0 left-5 md:left-1 z-0 h-full w-[28rem] p-6 flex items-center bg-[#a06b5b]
+                                   -translate-x-6 opacity-0 duration-500 ease-out [clip-path:inset(0_100%_0_0)]
+                                   peer-checked:pointer-events-auto peer-checked:translate-x-0 peer-checked:opacity-100 peer-checked:[clip-path:inset(0_0_0_0)]">
+                            <p class="font-mono text-white text-xl md:text-2xl">
+                                Smooth and milky, with a light espresso taste.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left md:max-w-[560px] transition-opacity duration-300 peer-has-[:checked]:opacity-0">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-6xl">LATTE</h2>
+
+                        <!-- Deskripsi buat di hp -->
+                        <p class="md:hidden font-mono text-white text-lg mt-4">Smooth and milky, with a light espresso
                             taste.</p>
+
                         <div
                             class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
                             22K</div>
@@ -161,14 +206,37 @@
                 </div>
 
                 <!-- espresso -->
-                <div id="expresso"
-                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#2e0e0a]">
+                <div id="espresso"
+                    class="w-screen h-full shrink-0 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-6 md:px-20 pt-20 pb-6 bg-[#2e0e0a]">
                     <img src="Espresso.png"
-                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
-                    <div class="text-center md:text-left">
-                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">ESPRESSO</h2>
-                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Strong, short and bold. Pure coffee.
-                        </p>
+                        class="w-[260px] md:w-[420px] shrink-0 aspect-square object-cover shadow-2xl">
+
+                    <div class="peer hidden md:block relative shrink-0 w-10 h-96">
+                        <input type="checkbox" id="desc-espresso" class="peer sr-only">
+
+                        <!-- Button -->
+                        <label for="desc-espresso"
+                            class="peer-checked:[&>span]:rotate-180 absolute inset-0 md:-translate-x-5 w-full h-full z-10 flex items-center justify-center cursor-pointer select-none bg-[#2e0e0a] shadow-[8px_0_20px_rgba(0,0,0,0.2)] font-sans text-white text-2xl font-bold">
+                            <span class="transition-transform duration-500">&gt;</span>
+                        </label>
+
+                        <!-- panel description -->
+                        <div
+                            class="absolute top-0 left-5 md:left-1 z-0 h-full w-[28rem] p-6 flex items-center bg-[#2e0e0a]
+                                   -translate-x-6 opacity-0 duration-500 ease-out [clip-path:inset(0_100%_0_0)]
+                                   peer-checked:pointer-events-auto peer-checked:translate-x-0 peer-checked:opacity-100 peer-checked:[clip-path:inset(0_0_0_0)]">
+                            <p class="font-mono text-white text-xl md:text-2xl">
+                                Strong, short and bold. Pure coffee.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left md:max-w-[560px] transition-opacity duration-300 peer-has-[:checked]:opacity-0">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-6xl">ESPRESSO</h2>
+
+                        <!-- Deskripsi buat di hp -->
+                        <p class="md:hidden font-mono text-white text-lg mt-4">Strong, short and bold. Pure coffee.</p>
+
                         <div
                             class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
                             15K</div>
@@ -177,12 +245,36 @@
 
                 <!-- Mocha -->
                 <div id="mocha"
-                    class="w-screen h-full shrink-0 grid grid-cols-1 md:grid-cols-2 items-center gap-6 px-6 md:px-20 pt-20 pb-6 bg-[#6b4a3a]">
+                    class="w-screen h-full shrink-0 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 px-6 md:px-20 pt-20 pb-6 bg-[#6b4a3a]">
                     <img src="Mocha.png"
-                        class="w-full max-w-[260px] md:max-w-[420px] aspect-square object-cover mx-auto shadow-2xl">
-                    <div class="text-center md:text-left">
-                        <h2 class="font-mono font-bold text-white text-4xl md:text-7xl">Mocha</h2>
-                        <p class="font-mono text-white text-lg md:text-2xl mt-4">Chocolate + Coffe.</p>
+                        class="w-[260px] md:w-[420px] shrink-0 aspect-square object-cover shadow-2xl">
+
+                    <div class="peer hidden md:block relative shrink-0 w-10 h-96">
+                        <input type="checkbox" id="desc-mocha" class="peer sr-only">
+
+                        <!-- Button -->
+                        <label for="desc-mocha"
+                            class="peer-checked:[&>span]:rotate-180 absolute inset-0 md:-translate-x-5 w-full h-full z-10 flex items-center justify-center cursor-pointer select-none bg-[#6b4a3a] shadow-[8px_0_20px_rgba(0,0,0,0.2)] font-sans text-white text-2xl font-bold">
+                            <span class="transition-transform duration-500">&gt;</span>
+                        </label>
+
+                        <!-- panel description -->
+                        <div
+                            class="absolute top-0 left-5 md:left-1 z-0 h-full w-[28rem] p-6 flex items-center bg-[#6b4a3a]
+                                   -translate-x-6 opacity-0 duration-500 ease-out [clip-path:inset(0_100%_0_0)]
+                                   peer-checked:pointer-events-auto peer-checked:translate-x-0 peer-checked:opacity-100 peer-checked:[clip-path:inset(0_0_0_0)]">
+                            <p class="font-mono text-white text-xl md:text-2xl">
+                                Chocolate + Coffe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left md:max-w-[560px] transition-opacity duration-300 peer-has-[:checked]:opacity-0">
+                        <h2 class="font-mono font-bold text-white text-4xl md:text-6xl">Mocha</h2>
+
+                        <!-- Deskripsi buat di hp -->
+                        <p class="md:hidden font-mono text-white text-lg mt-4">Chocolate + Coffe.</p>
+
                         <div
                             class="inline-block bg-[#D32567] text-white font-mono font-bold text-2xl md:text-4xl px-6 py-3 mt-6">
                             15K</div>
