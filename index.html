@@ -3,6 +3,23 @@
 
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style> @keyframes fade-up {
+        from { opacity: 0; translate: 0 60px; scale: 0.9; }
+        to   { opacity: 1; translate: 0 0;    scale: 1; }
+    }
+
+    #cappucino > *, #latte > *, #espresso > *, #mocha > *, #viewall > * {
+        animation: fade-up ease-in backwards;
+        animation-timeline: scroll(root);
+    }
+
+    #cappucino > * { animation-range: 20vh 100vh; }
+    #latte     > * { animation-range: 120vh 200vh; }
+    #espresso  > * { animation-range: 220vh 300vh; }
+    #mocha     > * { animation-range: 320vh 400vh; }
+    #viewall   > * { animation-range: 420vh 500vh; }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canteen</title>
@@ -19,7 +36,7 @@
         </a>
         <nav class="flex gap-x-8 text-1xl justify-center items-center text-white">
             <a href="">Home</a>
-            <a href="">Snack</a>
+            <a href="">Menu</a>
             <a href="">About</a>
         </nav>
     </header>
@@ -282,7 +299,7 @@
                 </div>
 
                 <!-- view all -->
-                <div
+                <div id="viewall"
                     class="w-screen h-full shrink-0 flex flex-col items-center justify-center gap-6 px-6 pt-20 pb-6">
                     <h2 class="font-mono font-bold text-white text-4xl md:text-7xl text-center">WANT MORE?</h2>
                     <p class="font-mono text-white text-lg md:text-2xl text-center">See everything we serve.</p>
